@@ -14,6 +14,9 @@ from homeassistant.components.sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
+    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+    ELECTRIC_CURRENT_AMPERE,
+    ELECTRIC_POTENTIAL_VOLT,
     PERCENTAGE,
     EntityCategory,
     UnitOfElectricCurrent,
@@ -107,6 +110,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25_VALUE,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         TuyaSensorEntityDescription(
@@ -278,6 +282,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25_VALUE,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
     ),
@@ -300,6 +305,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25_VALUE,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         TuyaSensorEntityDescription(
@@ -451,6 +457,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25_VALUE,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         TuyaSensorEntityDescription(
@@ -486,12 +493,14 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM1,
             translation_key="pm1",
             device_class=SensorDeviceClass.PM1,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         TuyaSensorEntityDescription(
             key=DPCode.PM10,
             translation_key="pm10",
             device_class=SensorDeviceClass.PM10,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         *BATTERY_SENSORS,
@@ -564,6 +573,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25_VALUE,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
         ),
         TuyaSensorEntityDescription(
@@ -949,6 +959,7 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             key=DPCode.PM25,
             translation_key="pm25",
             device_class=SensorDeviceClass.PM25,
+            native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
             state_class=SensorStateClass.MEASUREMENT,
             icon="mdi:molecule",
         ),
